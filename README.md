@@ -5,16 +5,17 @@
 In this project a Markov Chain, built upon an existing file.txt, is used in order to build a random text generator. 
 The random text generator generates the text by randomly and continuously picking one suffix for each prefix inside 
 the Markov Chain.
+Check this  [detailed article](https://blog.rinatussenov.com/text-analysis-markov-chains-and-bible-quotes-generator-fd0fa09ced20) for further knowledge.
 
 ### Scripts
 - *markov_random_text.py* is the script which actually generates the random text based on a Markov Analysis.
 - *markov_analysis.py* is a module inside the *markov* package, and it is where the actual Markov Analysis is performed.
 
-Inside *markov_random_text.py*, a function called **`markov_random_text`** is used to generate the random text. 
-The function accepts two parameters: **`filename`** is the name of the file.txt based on which the random generation 
-will come from, and  **`n`** which is the prefix length. The prefix length is the number of words that have to be present
+Inside *markov_random_text.py*, a function called `markov_random_text` is used to generate the random text. 
+The function accepts two parameters: `filename` is the name of the file.txt based on which the random generation 
+will come from, and  `n` which is the prefix length. The prefix length is the number of words that have to be present
 in each Markov Chain prefix. 
-The **`markov_random_text`**, inside its body, will invoke the  **`markov_analysis`** function and passing the same two 
+The `markov_random_text`, inside its body, will invoke the  `markov_analysis` function and passing the same two 
 arguments to it (the name of the file and the prefix length). This last function will perform the analysis and return
 a dictionary where each key is a prefix (with n words inside it) and its value is the list of the possible suffixes coming
 after that prefix occurrence (it might be one suffix or more).
