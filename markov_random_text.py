@@ -1,4 +1,4 @@
-from markov_analysis import markov_analysis
+from markov.markov_analysis import markov_analysis
 
 import sys, random
 
@@ -13,7 +13,6 @@ def markov_random_text(filename, n):
     d = markov_analysis(filename, n)
     # I use the beginning of the file as first prefix
     prefix = list(d)[0]
-    prefix_len = len(prefix)
     output = prefix
 
     for i in range(len(d)):

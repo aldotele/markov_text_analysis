@@ -1,4 +1,3 @@
-
 import sys
 
 
@@ -63,7 +62,10 @@ def main():
     inf = sys.argv[1]
     prefix_length = sys.argv[2]
     inf_analysis = markov_analysis(inf, prefix_length)
-    print(inf_analysis)
+
+    userinput = input('To view your analysis, please type "yes": ')
+    if userinput.lower() == 'yes':
+        print(inf_analysis)
 
     # printing only the prefixes with more than one suffix
     """
